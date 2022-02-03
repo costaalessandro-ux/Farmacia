@@ -10,10 +10,9 @@
         <center><h1> MENU </h1></center>
     </header>
     <body>
-        <a href = "menu/notaFiscal.php"> CADASTRO DE CONPRAS </a><p>  
-        <a href = "menu/resumodia.php"> RESUMO DO DIA </a><p>    
-        <a href = "menu/admin/admin.php"> ADMINISTRADOR </a><p> 
-        <a href = "index.php"> SAIR </a><p> 
+        <a href = "../cadastroVendas/formCadastroVenda.php"> CADASTRO DE VENDAS </a><p>      
+        <a href = "../admin/cadastroProdutos/formCadastroProdutos.php"> ADMINISTRADOR </a><p> 
+        <a href = "../index.php"> SAIR </a><p> 
         <?php
         // put your code here
         ?>

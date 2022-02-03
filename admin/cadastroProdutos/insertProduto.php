@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
     </head>
     <body>
         <?php
- require_once '../../../../conexao.php';
+        require_once '../../conexao.php';
  $id;
  $nome = $_POST['nome'];
- $quant = $_POST['quant'];
+ $quantidade = $_POST['quantidade'];
  $valor = $_POST['valor'];
  $descricao = $_POST['descricao'];
  
@@ -17,7 +20,7 @@
          $query = "INSERT INTO produto(nome,quantidade,valor,descricao) values (:nome, :quantidade, :valor, :descricao);";
          $stmt=$conn->prepare($query);
          $stmt->bindParam(":nome",$nome, PDO::PARAM_STR);
-         $stmt->bindParam(":quantidade",$quant, PDO::PARAM_INT);
+         $stmt->bindParam(":quantidade",$quantidade, PDO::PARAM_INT);
          $stmt->bindParam(":valor",$valor, PDO::PARAM_INT);
          $stmt->bindParam(":descricao",$descricao, PDO::PARAM_STR);
          $stmt->execute();
@@ -26,7 +29,7 @@
      } catch (PDOException $ex) {
        echo "ERRO: ".$ex->getMessage();
      } 
- ?>
-         <p><a href="selectCadastro.php">VOLTAR</a></p>
+        ?>
     </body>
+    <p><a href="formCadastroProdutos.php">VOLTAR</a></p>
 </html>
