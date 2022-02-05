@@ -19,10 +19,10 @@
      try{
          $query = "INSERT INTO produto(nome,quantidade,valor,descricao) values (:nome, :quantidade, :valor, :descricao);";
          $stmt=$conn->prepare($query);
-         $stmt->bindParam(":nome",$nome, PDO::PARAM_STR);
-         $stmt->bindParam(":quantidade",$quantidade, PDO::PARAM_INT);
-         $stmt->bindParam(":valor",$valor, PDO::PARAM_INT);
-         $stmt->bindParam(":descricao",$descricao, PDO::PARAM_STR);
+         $stmt->bindValue(":nome",$nome, PDO::PARAM_STR);
+         $stmt->bindValue(":quantidade",$quantidade, PDO::PARAM_INT);
+         $stmt->bindValue(":valor",$valor, PDO::PARAM_INT);
+         $stmt->bindValue(":descricao",$descricao, PDO::PARAM_STR);
          $stmt->execute();
          echo "Inclusão efetuada com Sucesso!";
          

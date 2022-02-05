@@ -15,8 +15,10 @@
             <input type="number" name="valor" id="valor" step="0.010" placeholder="VALOR UNITARIO" required><p>
             <textarea id="descricao" name="descricao" rows="5" cols="25" placeholder="DESCRICAO DO PRODUTO"></textarea><p>
             <input type="submit" name="ENVIAR" id="ENVIAR"> <input type="reset" name="reset" id="REDEFINIR">
-            <p><a href="../../menu/menu.php">VOLTAR</a></p>
+           
         </form>
+            <p><a href="selectProduto.php">Consultar Produtos</a></p>
+             <p><a href="../../menu/menu.php">VOLTAR</a></p>
         </center>
     </body>
 </html>

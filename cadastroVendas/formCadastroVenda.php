@@ -7,11 +7,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro de Cliente</title>
+        <title>Cadastro de Vendas</title>
     </head>
     <body>
         <form action="insertVendas.php" method="post">
-        <div><h1>Cadastro de Cliente</h1></div>
+        <div><h1>Cadastro de Vendas</h1></div>
         <label for="nome">Nome do Cliente:</label>
         <input type="text" name="nome" id="nome">
         <label for="telefone">Telefone:</label>
@@ -25,7 +25,7 @@
         <input type="submit" name="botao" id="botao" value="Enviar">
         <input type="reset" name="botao1" id="botao1" value="Redefinir">
         </form>
-        <p><a href="../menu/menu.php">Consultar</a></p>
+        <p><a href="">Consultar</a></p>
         <p><a href="../menu/menu.php">VOLTAR</a></p>
     </body>
 </html>
