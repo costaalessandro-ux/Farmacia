@@ -16,23 +16,24 @@
         $quantidade = $_GET["quantidade"];
         $valor = $_GET["valor"];
         $descricao = $_GET["descricao"];
-      
 
         try {
-          
-            $stmt=$conn->prepare("UPDATE produto SET nome = '$nome',
-                     quantidade = $quantidade,
-                     valor = $valor, 
-                     descricao = '$descricao'
-                     WHERE id = $id; ");
-            $stmt->bindValue(":nome",$nome, PDO::PARAM_STR);
-            $stmt->bindValue(":quantidade",$quantidade, PDO::PARAM_INT);
-            $stmt->bindValue(":valor",$valor, PDO::PARAM_INT);
-            $stmt->bindValue(":descricao",$descricao, PDO::PARAM_STR);
-            $stmt->bindValue(":id",$id, PDO::PARAM_INT);
+            $query = "UPDATE produto set nome = :nome,
+                     quantidade = :quantidade,
+                     valor = :valor, 
+                     descricao = :descricao
+                     where id = :id;";
+
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(":nome", $nome, PDO::PARAM_STR);
+            $stmt->bindParam(":quantidade", $quantidade, PDO::PARAM_INT);
+            $stmt->bindParam(":valor", $valor, PDO::PARAM_INT);
+            $stmt->bindParam(":descricao", $descricao, PDO::PARAM_STR);
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             $stmt->execute();
+
             echo "Alteração efetuada com sucesso";
-        } catch (Exception $e) {
+        } catch (PDOException $e) {
             echo "ERROO: " . $e->getMessage();
         }
         ?>

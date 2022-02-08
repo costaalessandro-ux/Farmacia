@@ -14,7 +14,6 @@
   try{
   echo "<h1>Lista de Produtos Cadastrados</h1>";
   
-  // lista cursos já cadastrados
   $query = "SELECT id, nome, quantidade, valor, descricao FROM produto;";
   $stmt = $conn->prepare($query);
 

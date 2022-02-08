@@ -16,11 +16,11 @@ function le($con, $id) {
     }
 }
 
-// funçaõ para CRUD do cliente!!
-function leCliente($con, $nome) {
+// função para CRUD do cliente!!
+function leVendas($con, $nome) {
     $row1 = array();
     try {
-        $query = "SELECT nome, telefone FROM cliente where nome = :nome;";
+        $query = "SELECT nome, telefone, dataNasc, quantidade, codigo FROM vendas where nome = :nome;";
         $stmt = $con->prepare($query);
         $stmt->bindParam(":nome", $nome, PDO::PARAM_STR);
         $stmt->execute();
