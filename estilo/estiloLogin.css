@@ -3,6 +3,10 @@ body{
     background-color: aliceblue;
 }
 
+header{
+  text-align: center;
+}
+
 .container{
     border-radius: 5px;
     border: none;
@@ -10,47 +14,43 @@ body{
     height: 250px;
     position: flex;
     margin-top: 185px;
-    /*
-    left: 500px;
-    right: 500px;
-    bottom: 185px;
-    */
 }
 
 .form-control{
     border-radius: 5px;
     border: none;
-    /*position: absolute;*/
     background: graytext;
-    width: 329px;    /*largura*/
-    height: 250px; /*altura*/
-  
-    
+    width: 329px;/*largura*/
+    height: 250px;/*altura*/
 }
 
 h2{
+ font: 30px Arial;
  text-align: center;
  color: aliceblue;
  margin-top: 10px;
 }
 
 input[type="text"]{
+    border-radius: 5px;
+    border: none;
     text-align: center;
     margin-top: 20px;
     width: 250px;
     height: 35px;
-    /*border-right: 30%;*/
 }
 
 input[type="password"]{
+    border-radius: 5px;
+    border: none;
     text-align: center;
     margin-top: 20px;
     width: 250px;
     height: 35px;
-    /*border-right:30%;*/
 }
 
 button[type="submit"]{
+    
     text-align: center;
     margin-top: 10px;
     width: 50%;

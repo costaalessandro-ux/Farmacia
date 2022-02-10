@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="../estilo/estiloMenu.css" rel="stylesheet" type="text/css">
-        <title>Menu Farmacia</title>
+        <title>HOME Farmacia</title>
     </head>
 
     <header class="text-center">
-        <h1> MENU </h1>
+        <h1> HOME </h1>
     </header>
 
     <body>

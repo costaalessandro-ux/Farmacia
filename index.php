@@ -19,10 +19,10 @@
             <div class="text-center">
                 <div class="mb-3">
                     <form action="menu/menu.php" method="post" class="form-control">
-                            <h2> LOGIN </h2>
+                            <h2> Login </h2>
                             <input type="text" name="user" id="user" placeholder="USUÁRIO"><p>
                             <input type="password" name="senha" id="senha" placeholder="SENHA"><p>
-                            <button type="submit" class="btn btn-primary">ENVIAR</button>
+                            <button type="submit" class="btn btn-primary">ENTRAR</button>
                     </form>
                 </div>
             </div>
