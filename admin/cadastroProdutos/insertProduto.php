@@ -10,18 +10,18 @@
     <body>
         <?php
         require_once '../../conexao.php';
- $id;
- $nome = $_POST['nome'];
- $quantidade = $_POST['quantidade'];
- $valor = $_POST['valor'];
+ $idProd;
+ $nomeProd = $_POST['nomeProd'];
+ $quantidadeProd = $_POST['quantidadeProd'];
+ $preco = $_POST['preco'];
  $descricao = $_POST['descricao'];
  
      try{
-         $query = "INSERT INTO produto(nome,quantidade,valor,descricao) values (:nome, :quantidade, :valor, :descricao);";
+         $query = "INSERT INTO produto(nomeProd,quantidadeProd,preco,descricao) values (:nomeProd, :quantidadeProd, :preco, :descricao);";
          $stmt=$conn->prepare($query);
-         $stmt->bindValue(":nome",$nome, PDO::PARAM_STR);
-         $stmt->bindValue(":quantidade",$quantidade, PDO::PARAM_INT);
-         $stmt->bindValue(":valor",$valor, PDO::PARAM_INT);
+         $stmt->bindValue(":nomeProd",$nomeProd, PDO::PARAM_STR);
+         $stmt->bindValue(":quantidadeProd",$quantidadeProd, PDO::PARAM_INT);
+         $stmt->bindValue(":preco",$preco, PDO::PARAM_INT);
          $stmt->bindValue(":descricao",$descricao, PDO::PARAM_STR);
          $stmt->execute();
          echo "Inclusão efetuada com Sucesso!";

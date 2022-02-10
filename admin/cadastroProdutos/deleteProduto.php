@@ -12,18 +12,18 @@ and open the template in the editor.
     <body>
         <?php
         require_once '../../conexao.php';
-  require_once '../../funcoes.php';
-  $id = $_GET["id"];
-  
-  try{
-  $query = "delete from produto where id=:id;";
-  $stmt = $conn->prepare($query);
-  $stmt->bindParam(":id",$id, PDO::PARAM_INT);
-  $stmt->execute();
-	echo "Exclusão efetuada com sucesso";
-  }catch (PDOException $e){
-		echo "Erro: ".$e->getMessage();
-	}
+        require_once '../../funcoes.php';
+        $id = $_GET["idProd"];
+
+        try {
+            $query = "delete from produto where idProd=:idProd;";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(":idProd", $id, PDO::PARAM_INT);
+            $stmt->execute();
+            echo "Exclusão efetuada com sucesso";
+        } catch (PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+        }
         ?>
         <br>
    	<p>

@@ -14,7 +14,7 @@
   try{
   echo "<h1>Lista de Produtos Cadastrados</h1>";
   
-  $query = "SELECT id, nome, quantidade, valor, descricao FROM produto;";
+  $query = "SELECT idProd, nomeProd, quantidadeProd, preco, descricao FROM produto;";
   $stmt = $conn->prepare($query);
 
    $stmt->execute();
@@ -23,32 +23,32 @@
 	  echo "<table border='1'>";
 	  echo "<tr>
 	          <th>id</th>
-			  <th>Nome</th>
+			  <th>Nome do Produto</th>
 			  <th>Quantidade</th>
-			  <th>Valor</th>
+			  <th>Preco</th>
                           <th>Descricao</th>
 			  <th colspan=\"2\">Ações</th>
 			</tr>";
 	  // busca os dados lidos do banco de dados
 	  while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-		  $id = $row["id"];
-		  $nome = $row["nome"];
-		  $quantidade = $row["quantidade"];
-		  $valor = $row["valor"];
+		  $idProd = $row["idProd"];
+		  $nomeProd = $row["nomeProd"];
+		  $quantidadeProd = $row["quantidadeProd"];
+		  $preco = $row["preco"];
                   $descricao = $row["descricao"];
 		  
 		  echo "<tr>";
-		  echo "<td> $id </td>";
-		  echo "<td> $nome</td>";
-		  echo "<td> $quantidade </td>";
-		  echo "<td> $valor </td>";
+		  echo "<td> $idProd </td>";
+		  echo "<td> $nomeProd</td>";
+		  echo "<td> $quantidadeProd </td>";
+		  echo "<td> $preco </td>";
                   echo "<td> $descricao </td>";
 		  
 		    
 		  
-		  echo '<td><a href="deleteProduto.php?id='. $row["id"] . '">Excluir</a></td>';
+		  echo '<td><a href="deleteProduto.php?idProd='. $row["idProd"] . '">Excluir</a></td>';
 		 
-		  echo '<td><a href="formAlterProduto.php?id='. $row["id"] . '">Alterar</a></td>';
+		  echo '<td><a href="formAlterProduto.php?idProd='. $row["idProd"] . '">Alterar</a></td>';
 		  
 		  echo "</tr>";
 	  }

@@ -9,27 +9,28 @@
     <body>
         <?php
         require_once '../../conexao.php';
-        //require_once '../../funcoes.php';
+        require_once '../../funcoes.php';
 
-        $id = $_GET["id"];
-        $nome = $_GET["nome"];
-        $quantidade = $_GET["quantidade"];
-        $valor = $_GET["valor"];
+        
+        $nomeProd = $_GET["nomeProd"];
+        $quantidadeProd = $_GET["quantidadeProd"];
+        $preco = $_GET["preco"];
         $descricao = $_GET["descricao"];
+        $idProd = $_GET["idProd"];
 
         try {
-            $query = "UPDATE produto set nome = :nome,
-                     quantidade = :quantidade,
-                     valor = :valor, 
+            $query = "UPDATE produto set nomeProd = :nomeProd,
+                     quantidadeProd = :quantidadeProd,
+                     preco = :preco, 
                      descricao = :descricao
-                     where id = :id;";
+                     where idProd = :idProd;";
 
             $stmt = $conn->prepare($query);
-            $stmt->bindParam(":nome", $nome, PDO::PARAM_STR);
-            $stmt->bindParam(":quantidade", $quantidade, PDO::PARAM_INT);
-            $stmt->bindParam(":valor", $valor, PDO::PARAM_INT);
+            $stmt->bindParam(":nomeProd", $nomeProd, PDO::PARAM_STR);
+            $stmt->bindParam(":quantidadeProd", $quantidadeProd, PDO::PARAM_INT);
+            $stmt->bindParam(":preco", $preco, PDO::PARAM_INT);
             $stmt->bindParam(":descricao", $descricao, PDO::PARAM_STR);
-            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            $stmt->bindParam(":idProd", $idProd, PDO::PARAM_INT);
             $stmt->execute();
 
             echo "Alteração efetuada com sucesso";

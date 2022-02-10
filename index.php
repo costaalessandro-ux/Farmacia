@@ -14,19 +14,21 @@
 
     </header>
 
-    <body  class="container">
+    <body>
+        <div class="container">
             <div class="text-center">
                 <div class="form-control">
+                    <form action="menu/menu.php" method="post">
                     <div class="mb-3">
-                        <form action="menu/menu.php" method="post">
                             <h2 class="text-center"> LOGIN </h2>
                             <input type="text" class="text-center" name="user" id="user" placeholder="USUÁRIO"><p>
                             <input type="password" class="text-center" name="senha" id="senha" placeholder="SENHA"><p>
                                 <button type="submit" class="btn btn-primary">Enviar</button>
-                        </form>
                     </div>
+                    </form>
                 </div>
             </div>
+        </div>
     </body>
 
 

@@ -3,8 +3,8 @@
 require_once '../../conexao.php';
 require_once '../../funcoes.php';
 
-$id = $_GET['id'];
-$linha = le($conn, $id);
+$idProd = $_GET['idProd'];
+$linha = le($conn, $idProd);
 ?>
 <html>
     <head>
@@ -16,12 +16,12 @@ $linha = le($conn, $id);
     <body>
     <center><h1> ATUALIZAÇÃO DE PRODUTOS </h1></center>
     <form action="alterProduto.php" method="GET">
-        <input type="hidden" name="id" value="<?php echo $linha["id"]; ?>">
-        <input type="text" name="nome" id="nome" value="<?php echo $linha["nome"]; ?>" placeholder="NOME"><p>
-        <input type="number" name="quantidade" id="quantidade" value="<?php echo $linha["quantidade"]; ?>" placeholder="QUANTIDADE"><p>
-        <input type="number" name="valor" id="valor" step="0.010" value="<?php echo $linha["valor"]; ?>" placeholder="VALOR UNITARIO"><p>
+        <input type="hidden" name="idProd" value="<?php echo $linha["idProd"]; ?>">
+        <input type="text" name="nomeProd" id="nomeProd" value="<?php echo $linha["nomeProd"]; ?>" placeholder="NOME"><p>
+        <input type="number" name="quantidadeProd" id="quantidadeProd" value="<?php echo $linha["quantidadeProd"]; ?>" placeholder="QUANTIDADE"><p>
+        <input type="number" name="preco" id="preco" step="0.010" value="<?php echo $linha["preco"]; ?>" placeholder="VALOR UNITARIO"><p>
         <input type="text" name="descricao" id="descricao" value="<?php echo $linha["descricao"]; ?>" placeholder="DESCRICAO"></p>
-        <p><input type="submit" name="ENVIAR" id="ENVIAR"></p>
+        <p><input type="submit" name="ENVIAR" id="ENVIAR" value="Enviar"></p>
     </form>
     <p>
         <a href="selectProduto.php">VOLTAR</a>
