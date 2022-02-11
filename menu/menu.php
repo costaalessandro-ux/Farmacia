@@ -9,24 +9,40 @@
         <title>HOME Farmacia</title>
     </head>
 
-    <header class="text-center">
-        <h1> HOME </h1>
+    <header>
+        <div class="data">
+            <h4>
+                <?php
+                $data = date('d/m/Y');
+                echo '<strong>' . $data . '</strong>';
+                ?>
+            </h4>
+            <h4>
+                <?php
+                date_default_timezone_set('America/Sao_Paulo');
+                echo '<strong>' . date('H:i:s') . '</strong>';
+                ?>
+            </h4>
+        </div>
+        
+        
+        
     </header>
-
+ 
     <body>
         <div class="container">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../cadastroVendas/formCadastroVenda.php">CADASTRO DE VENDAS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../admin/cadastroProdutos/formCadastroProdutos.php">ADMINISTRADOR</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.php">SAIR</a>
-                </li>
-            </ul>
-        </div>
+             <div class="row align-items-end">
+            <div class="col">
+                <a href="../admin/cadastroProdutos/formCadastroProdutos.php"><img src="../icones/person.svg" alt="" width="300" height="200"></a>
+            </div>
+             <div class="col">
+                <a  href="../cadastroVendas/formCadastroVenda.php"><img src="../icones/cart-plus.svg " alt="" width="300" height="200"> </a>
+            </div>
+            <div class="col">
+                <a href="../index.php"><img src="../icones/box-arrow-left.svg" alt="" width="300" height="200"></a>
+            </div>
+             </div>
+        </div>  
     </body>
 
     <footer>
