@@ -9,11 +9,6 @@
         <link href="estilo/estiloLogin.css" rel="stylesheet" type="text/css">
         <title>Farmacia</title>
     </head>
-
-    <header>
-
-    </header>
-
     <body>
         <div class="container">
             <div class="text-center">

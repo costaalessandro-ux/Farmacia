@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    background-color: aliceblue;
+}
+
+header{
+  text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    display: grid;
+    grid-template-areas: 'lado1' 'lado2';
+    background-color: yellow;
+    grid-gap: 100px;
+    border-radius: 5px;
+    border: none;
+    width: 1200px;
+    height: 350px;
+    margin-top: 50px;
+}
+
+.lado1{
+    grid-area: lado1;
+    background-color: blue;
+    width: 400px;
+    height: 100px;
+    top: 100px;
+}
+
+.lado2{
+    grid-area: lado2;
+    margin-left: 425px;
+    background-color: red;
+    width: 400px;
+    height: 100px;
+   
+}
