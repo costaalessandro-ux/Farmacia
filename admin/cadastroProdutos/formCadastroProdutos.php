@@ -22,17 +22,20 @@
                 <div class="mb-3">
                     <form action="admin/cadastroProdutos/insertProduto.php" method="post">
                         <div class="lado1">
-                            NOME DO PRODUTO: <input type="text" name="nomeProd" id="nomeProd" required>QUANTIDADE: <input type="number" name="quantidadeProd" id="quantidadeProd">
+                            NOME DO PRODUTO: <input type="text" name="nomeProd" id="nomeProd" required>   QUANTIDADE: <input type="number" name="quantidadeProd" id="quantidadeProd">
                         </div>
                         <div class="lado2">
-                            VALOR UNITARIO: <input type="number" name="preco" id="preco" step="0.010" required>DESCRICAO DO PRODUTO: <input type="text" name="descricao" id="descricao" required>
+                            VALOR UNITARIO: <input type="number" name="preco" id="preco" step="0.010" required>  DESCRIÇÃO DO PRODUTO: <input type="text" name="descricao" id="descricao" required>
                         </div>
-                        <input type="submit" name="enviar" id="enviar" value="ENVIAR"> <input type="reset" name="reset" id="reset" value="REDEFINIR">
+                        <div class="botoes">
+                            <input type="submit" name="enviar" id="enviar" value="ENVIAR"> <input type="reset" name="reset" id="reset" value="REDEFINIR">
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-        <p><a href="selectProduto.php">CONSULTAR PRODUTOS</a></p>
-        <p><a href="../../menu/menu.php">VOLTAR</a></p>
+        <div class="itens">
+            <a href="selectProduto.php"><img src="../../icones/card-list.svg" alt="" width="100" height="50"></a>   <a href="../../menu/menu.php"><img src="../../icones/box-arrow-left.svg" alt="" width="100" height="50"></a>
+        </div>
     </body>
 </html>

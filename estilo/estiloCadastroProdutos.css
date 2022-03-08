@@ -4,7 +4,8 @@ body{
 }
 
 header{
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .container{
@@ -13,28 +14,45 @@ header{
     align-items: flex-start;
     display: grid;
     grid-template-areas: 'lado1' 'lado2';
-    background-color: yellow;
-    grid-gap: 100px;
+    /*background-color: yellow;*/
     border-radius: 5px;
     border: none;
-    width: 1200px;
+    width: 100%;
     height: 350px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .lado1{
     grid-area: lado1;
-    background-color: blue;
-    width: 400px;
-    height: 100px;
-    top: 100px;
+    /*background-color: red;*/
+    position: static;
+    top: auto;
+    left:auto;
+    margin-top: 50px;
 }
 
 .lado2{
     grid-area: lado2;
-    margin-left: 425px;
-    background-color: red;
-    width: 400px;
-    height: 100px;
-   
+    /*background-color: red;*/
+    position: static;
+    top: auto;
+    left: auto;
+    margin-top: 50px;
+}
+
+.botoes{
+    /*background-color: blue;*/
+    position: static;
+    top: auto;
+    left: auto;
+    margin-top: 100px;
+}
+
+.itens{
+    /*background-color: green;*/
+    position: static;
+    left: auto;
+    top: auto;
+    text-align: center;
+    margin-top: 50px;
 }
