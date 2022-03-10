@@ -22,10 +22,16 @@
                 <div class="mb-3">
                     <form action="admin/cadastroProdutos/insertProduto.php" method="post">
                         <div class="lado1">
-                            NOME DO PRODUTO: <input type="text" name="nomeProd" id="nomeProd" required>   QUANTIDADE: <input type="number" name="quantidadeProd" id="quantidadeProd">
+                            NOME DO PRODUTO: 
+                            <p><input type="text" name="nomeProd" id="nomeProd" required></p>
+                            QUANTIDADE: 
+                            <input type="number" name="quantidadeProd" id="quantidadeProd">
                         </div>
-                        <div class="lado2">
-                            VALOR UNITARIO: <input type="number" name="preco" id="preco" step="0.010" required>  DESCRIÇÃO DO PRODUTO: <input type="text" name="descricao" id="descricao" required>
+                        <div class="lado2">  
+                            VALOR UNITARIO: 
+                            <p><input type="number" name="preco" id="preco" step="0.010" required></p>
+                            DESCRIÇÃO DO PRODUTO: 
+                            <input type="text" name="descricao" id="descricao" required>
                         </div>
                         <div class="botoes">
                             <input type="submit" name="enviar" id="enviar" value="ENVIAR"> <input type="reset" name="reset" id="reset" value="REDEFINIR">

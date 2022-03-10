@@ -22,7 +22,7 @@ header{
 }
 
 .lado1{
-    
+    background-color: red;
     position: static;
     top: 200px;
     left: auto;
@@ -33,11 +33,12 @@ header{
 }
 
 .lado2{
-    
+    background-color: red;
     position: static;
+   
     margin-left: 300px;
     width: 190px;
-    height: 160px;
+    height: 0px;
     text-align: left;
 }
 
@@ -45,7 +46,7 @@ header{
     position: static;
     top: auto;
     left: auto;
-    margin-top: 80px;
+    margin-top: 325px;
     color: blue;
 }
 
@@ -54,5 +55,5 @@ header{
     left: auto;
     top: auto;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 80px;
 }
