@@ -9,18 +9,16 @@
         <link href="../../estilo/estiloCadastroProdutos.css" rel="stylesheet" type="text/css">
         <title>Cadastro de Produtos</title>
     </head>
-
+     
     <header>
         <h1> CADASTRO DE PRODUTOS </h1>
     </header>
 
     <body>
-
-
         <div class="container">
             <div class="text-center">
                 <div class="mb-3">
-                    <form action="admin/cadastroProdutos/insertProduto.php" method="post">
+                    <form action="insertProduto.php" method="post">
                         <div class="lado1">
                             NOME DO PRODUTO: 
                             <p><input type="text" name="nomeProd" id="nomeProd" required></p>

@@ -2,24 +2,29 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="../estilo/estiloSelectVendas.css" rel="stylesheet" type="text/css">
+        <title>Vendas Realizadas</title>
     </head>
     <body>
+        <div class="titulo">
+        <h1>VENDAS REALIZADAS</h1>
+        </div>
         <?php
         require_once '../funcoes.php';
         require_once '../conexao.php';
         try {
-            echo "<h1>Lista de Vendas Cadastradas</h1>";
-
             $query = "select v.nome, v.telefone, v.dataNasc, v.quantidade, p.idProd, p.nomeProd, v.hora, v.valorPago, (v.quantidade * p.preco) as Valor_Total, (v.valorPago - (v.quantidade * p.preco)) as troco
             from vendas as v inner join produto as p on v.codigo = p.idProd;";
             $stmt = $conn->prepare($query);
             $stmt->execute();
             if ($result = $query) {
-                echo "<table border='1'>";
+              
+                echo "<table class='table table-borderless'>";
                 echo "<tr>
-			  <th> Nome do Cliente </th>
-			  <th> Telefone </th>
+			  <th scope='col'> Nome do Cliente </th>
+			  <p><th> Telefone </th></p>
                           <th> Data da Compra </th>
                           <th> Hora da Compra </th>
                           <th> Nome do Remedio </th>
@@ -61,8 +66,10 @@
             echo "Erro: " . $e->getMessage();
         }
         ?>
+        <div class="icone">
         <p>
-            <a href="formCadastroVenda.php">VOLTAR</a>
+            <a href="formCadastroVenda.php"><img src="../icones/box-arrow-left.svg" alt="" width="100" height="50"></a>
         </p>
+        </div>
     </body>
 </html>
