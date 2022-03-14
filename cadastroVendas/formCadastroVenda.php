@@ -27,8 +27,7 @@
                                 <p><input type="date" name="dataNasc" id="dataNasc"></p> 
                                     HORA: 
                                     <p><input type="time" name="hora" id="hora"></p>
-                        </div>
-                        <div class="lado2"> 
+                        
                             CODIGO DO PRODUTO: 
                             <p><input type="number" name="codigo" id="codigo"></p>
                             QUANTIDADE:

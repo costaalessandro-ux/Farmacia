@@ -23,13 +23,13 @@
                             NOME DO PRODUTO: 
                             <p><input type="text" name="nomeProd" id="nomeProd" required></p>
                             QUANTIDADE: 
-                            <input type="number" name="quantidadeProd" id="quantidadeProd">
+                            <p><input type="number" name="quantidadeProd" id="quantidadeProd"></p>
                         </div>
                         <div class="lado2">  
                             VALOR UNITARIO: 
                             <p><input type="number" name="preco" id="preco" step="0.010" required></p>
                             DESCRIÇÃO DO PRODUTO: 
-                            <input type="text" name="descricao" id="descricao" required>
+                            <p><input type="text" name="descricao" id="descricao" required></p>
                         </div>
                         <div class="botoes">
                             <input type="submit" name="enviar" id="enviar" value="ENVIAR"> <input type="reset" name="reset" id="reset" value="REDEFINIR">

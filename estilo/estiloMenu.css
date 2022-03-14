@@ -4,7 +4,6 @@
 }
 
 body{
-    margin: 0; 
     background-color: aliceblue;
 }
 
@@ -13,24 +12,28 @@ h1{
 }
 
 .data{
-    text-align: right;
-    margin-right: 30px;
+    text-align: left;
 }
 
 .container{
-   top: 200px;
-   left: 250px;
+   
+   position: static;
+   margin-top: 250px;
    height: 210px;
-   width: 850px;
-   position: absolute;
+   width: 900px;
+   
 }
 
 .row{
+    
     width: 850px;
     height: 210px;
+    margin-top: 20px;
+    margin-left: 12px;
 }
 
 .col{
     width: 20px;
     height: 200px;
+    left: 1px;
 }
