@@ -10,33 +10,20 @@
     </head>
 
     <header>
-        <div class="data">
-            <h4>
-                <?php
-                $data = date('d/m/Y');
-                echo '<strong>' . $data . '</strong>';
-                ?>
-            </h4>
-            <h4>
-                <?php
-                date_default_timezone_set('America/Sao_Paulo');
-                echo '<strong>' . date('H:i:s') . '</strong>';
-                ?>
-            </h4>
-        </div>  
+       
     </header>
  
     <body>
         <div class="container">
-             <div class="row align-items-end">
+             <div class="row">
             <div class="col">
-                <a href="../admin/cadastroProdutos/formCadastroProdutos.php"><img src="../icones/person.svg" alt="" width="300" height="200"></a>
+                <a href="../admin/cadastroProdutos/formCadastroProdutos.php"><img src="../icones/person.svg" alt="" width="50" height="50"></a>
             </div>
              <div class="col">
-                <a  href="../cadastroVendas/formCadastroVenda.php"><img src="../icones/cart-plus.svg " alt="" width="300" height="200"> </a>
+                <a  href="../cadastroVendas/formCadastroVenda.php"><img src="../icones/cart-plus.svg " alt="" width="50" height="50"> </a>
             </div>
             <div class="col">
-                <a href="../index.php"><img src="../icones/box-arrow-left.svg" alt="" width="300" height="200"></a>
+                <a href="../index.php"><img src="../icones/box-arrow-left.svg" alt="" width="50" height="50"></a>
             </div>
              </div>
         </div>  

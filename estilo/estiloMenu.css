@@ -11,26 +11,15 @@ h1{
    text-align: center; 
 }
 
-.data{
-    text-align: left;
-}
-
 .container{
-   
    position: static;
    margin-top: 250px;
-   height: 210px;
-   width: 900px;
+   height: 50px;
+   width: 350px;
    
 }
 
-.row{
-    
-    width: 850px;
-    height: 210px;
-    margin-top: 20px;
-    margin-left: 12px;
-}
+
 
 .col{
     width: 20px;
