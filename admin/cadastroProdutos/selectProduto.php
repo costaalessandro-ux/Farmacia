@@ -18,7 +18,7 @@
          require_once '../../conexao.php';
   try{
   
-  $query = "SELECT idProd, nomeProd, quantidadeProd, preco, descricao FROM produto;";
+  $query = "SELECT idprod, nomeprod, quantidadeprod, preco, descricao FROM produto;";
   $stmt = $conn->prepare($query);
 
    $stmt->execute();
@@ -38,9 +38,9 @@
           
 	  // busca os dados lidos do banco de dados
 	  while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
-		  $idProd = $row["idProd"];
-		  $nomeProd = $row["nomeProd"];
-		  $quantidadeProd = $row["quantidadeProd"];
+		  $idProd = $row["idprod"];
+		  $nomeProd = $row["nomeprod"];
+		  $quantidadeProd = $row["quantidadeprod"];
 		  $preco = $row["preco"];
                   $descricao = $row["descricao"];
                   
@@ -50,8 +50,8 @@
 		  echo "<td>$quantidadeProd</td>";
 		  echo "<td>$preco</td>";
                   echo "<td>$descricao</td>";	  
-		  echo '<td><a href="deleteProduto.php?idProd='. $row["idProd"] . '"><img src="../../icones/file-excel.svg" alt="" width="15" height="30"></a></td>';
-		  echo '<td><a href="formAlterProduto.php?idProd='. $row["idProd"] . '">Alterar</a></td>';
+		  echo '<td><a href="deleteProduto.php?idProd='. $row["idprod"] . '"><img src="../../icones/file-excel.svg" alt="" width="15" height="30"></a></td>';
+		  echo '<td><a href="formAlterProduto.php?idProd='. $row["idrod"] . '">Alterar</a></td>';
 		  echo "</tr>";
 	  }
   }       
