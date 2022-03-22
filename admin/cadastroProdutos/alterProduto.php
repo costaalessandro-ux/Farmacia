@@ -12,25 +12,25 @@
         require_once '../../funcoes.php';
 
         
-        $nomeProd = $_GET["nomeProd"];
-        $quantidadeProd = $_GET["quantidadeProd"];
+        $nomeProd = $_GET["nomeprod"];
+        $quantidadeProd = $_GET["quantidadeprod"];
         $preco = $_GET["preco"];
         $descricao = $_GET["descricao"];
-        $idProd = $_GET["idProd"];
+        $idProd = $_GET["idprod"];
 
         try {
-            $query = "UPDATE produto set nomeProd = :nomeProd,
-                     quantidadeProd = :quantidadeProd,
+            $query = "UPDATE produto set nomeprod = :nomeprod,
+                     quantidadeprod = :quantidadeprod,
                      preco = :preco, 
                      descricao = :descricao
                      where idProd = :idProd;";
 
             $stmt = $conn->prepare($query);
-            $stmt->bindParam(":nomeProd", $nomeProd, PDO::PARAM_STR);
-            $stmt->bindParam(":quantidadeProd", $quantidadeProd, PDO::PARAM_INT);
+            $stmt->bindParam(":nomeprod", $nomeProd, PDO::PARAM_STR);
+            $stmt->bindParam(":quantidadeprod", $quantidadeProd, PDO::PARAM_INT);
             $stmt->bindParam(":preco", $preco, PDO::PARAM_INT);
             $stmt->bindParam(":descricao", $descricao, PDO::PARAM_STR);
-            $stmt->bindParam(":idProd", $idProd, PDO::PARAM_INT);
+            $stmt->bindParam(":idprod", $idProd, PDO::PARAM_INT);
             $stmt->execute();
 
             echo "Alteração efetuada com sucesso";

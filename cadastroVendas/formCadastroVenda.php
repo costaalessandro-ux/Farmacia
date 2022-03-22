@@ -24,7 +24,7 @@
                             TELEFONE: 
                             <p><input type="text" name="telefone" id="telefone"></p>
                                 DATA: 
-                                <p><input type="date" name="dataNasc" id="dataNasc"></p> 
+                                <p><input type="date" name="dataNasc" id="datanasc"></p> 
                                     HORA: 
                                     <p><input type="time" name="hora" id="hora"></p>
                         
@@ -33,7 +33,7 @@
                             QUANTIDADE:
                             <p><input type="number" id="quantidade" name="quantidade" required></p>
                             VALOR PAGO: 
-                            <p><input type="number" id="valorPago" name="valorPago" required></p>
+                            <p><input type="number" id="valorpago" name="valorPago" required></p>
                         </div>
                         <div class="botoes"> 
                             <input type="submit" name="botao" id="botao" value="ENVIAR">

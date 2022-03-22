@@ -13,12 +13,12 @@ and open the template in the editor.
         <?php
         require_once '../../conexao.php';
         require_once '../../funcoes.php';
-        $id = $_GET["idProd"];
+        $id = $_GET["idprod"];
 
         try {
-            $query = "delete from produto where idProd=:idProd;";
+            $query = "delete from produto where idprod=:idprod;";
             $stmt = $conn->prepare($query);
-            $stmt->bindParam(":idProd", $id, PDO::PARAM_INT);
+            $stmt->bindParam(":idprod", $id, PDO::PARAM_INT);
             $stmt->execute();
             echo "Exclusão efetuada com sucesso";
         } catch (PDOException $e) {

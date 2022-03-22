@@ -23,13 +23,13 @@ $linha = le($conn, $idProd);
             <div class="mb-3">
                 <form action="alterProduto.php" method="GET">
 
-                    <input type="hidden" name="idProd" value="<?php echo $linha["idProd"]; ?>">
+                    <input type="hidden" name="idprod" value="<?php echo $linha["idprod"]; ?>">
 
                     <div class="lado1">
                         NOME DO PRODUTO: 
-                        <p><input type="text" name="nomeProd" id="nomeProd" value="<?php echo $linha["nomeProd"]; ?>" placeholder="NOME"></p>
+                        <p><input type="text" name="nomeProd" id="nomeprod" value="<?php echo $linha["nomeprod"]; ?>" placeholder="NOME"></p>
                         QUANTIDADE: 
-                        <p><input type="number" name="quantidadeProd" id="quantidadeProd" value="<?php echo $linha["quantidadeProd"]; ?>" placeholder="QUANTIDADE"></p>
+                        <p><input type="number" name="quantidadeProd" id="quantidadeprod" value="<?php echo $linha["quantidadeprod"]; ?>" placeholder="QUANTIDADE"></p>
                     </div>
                     <div class="lado2">
                         VALOR UNITARIO: 

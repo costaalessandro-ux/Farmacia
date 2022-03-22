@@ -21,9 +21,9 @@
                     <form action="insertProduto.php" method="post">
                         <div class="lado1">
                             NOME DO PRODUTO: 
-                            <p><input type="text" name="nomeProd" id="nomeProd" required></p>
+                            <p><input type="text" name="nomeProd" id="nomeprod" required></p>
                             QUANTIDADE: 
-                            <p><input type="number" name="quantidadeProd" id="quantidadeProd"></p>
+                            <p><input type="number" name="quantidadeProd" id="quantidadeprod"></p>
                         </div>
                         <div class="lado2">  
                             VALOR UNITARIO: 
