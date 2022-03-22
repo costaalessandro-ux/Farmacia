@@ -15,8 +15,8 @@
         require_once '../funcoes.php';
         require_once '../conexao.php';
         try {
-            $query = "select v.nome, v.telefone, v.dataNasc, v.quantidade, p.idProd, p.nomeProd, v.hora, v.valorPago, (v.quantidade * p.preco) as Valor_Total, (v.valorPago - (v.quantidade * p.preco)) as troco
-            from vendas as v inner join produto as p on v.codigo = p.idProd;";
+            $query = "select v.nome, v.telefone, v.datanasc, v.quantidade, p.idprod, p.nomeprod, v.hora, v.valorpago, (v.quantidade * p.preco) as Valor_Total, (v.valorpago - (v.quantidade * p.preco)) as troco
+            from vendas as v inner join produto as p on v.codigo = p.idprod;";
             $stmt = $conn->prepare($query);
             $stmt->execute();
             if ($result = $query) {
@@ -38,12 +38,12 @@
                 while ($row1 = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     $nome = $row1["nome"];
                     $telefone = $row1["telefone"];
-                    $dataNasc = $row1["dataNasc"];
+                    $dataNasc = $row1["datanasc"];
                     $hora = $row1["hora"];
-                    $nomeRem = $row1["nomeProd"];
+                    $nomeRem = $row1["nomeprod"];
                     $quantidade = $row1["quantidade"];
                     $valorTot = $row1["Valor_Total"];
-                    $valorPago = $row1["valorPago"];
+                    $valorPago = $row1["valorpago"];
                     $valorTroco = $row1["troco"];
 
                     echo "<tr>";

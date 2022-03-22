@@ -11,16 +11,16 @@
         <?php
         require_once '../../conexao.php';
  $idProd;
- $nomeProd = $_POST['nomeProd'];
- $quantidadeProd = $_POST['quantidadeProd'];
+ $nomeProd = $_POST['nomeprod'];
+ $quantidadeProd = $_POST['quantidadeprod'];
  $preco = $_POST['preco'];
  $descricao = $_POST['descricao'];
  
      try{
-         $query = "INSERT INTO produto(nomeProd,quantidadeProd,preco,descricao) values (:nomeProd, :quantidadeProd, :preco, :descricao);";
+         $query = "INSERT INTO produto(nomeprod,quantidadeprod,preco,descricao) values (:nomeprod, :quantidadeprod, :preco, :descricao);";
          $stmt=$conn->prepare($query);
-         $stmt->bindValue(":nomeProd",$nomeProd, PDO::PARAM_STR);
-         $stmt->bindValue(":quantidadeProd",$quantidadeProd, PDO::PARAM_INT);
+         $stmt->bindValue(":nomeprod",$nomeProd, PDO::PARAM_STR);
+         $stmt->bindValue(":quantidadeprod",$quantidadeProd, PDO::PARAM_INT);
          $stmt->bindValue(":preco",$preco, PDO::PARAM_INT);
          $stmt->bindValue(":descricao",$descricao, PDO::PARAM_STR);
          $stmt->execute();
