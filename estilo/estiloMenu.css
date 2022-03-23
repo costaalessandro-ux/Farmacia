@@ -12,10 +12,9 @@ h1{
 }
 
 .container{
-   background-color: blue;
    position: static;
    margin-top: 250px;
-   margin-right: 10px;
+   align-content: center;
    height: 200px;
    width: 580px;
    
