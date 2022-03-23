@@ -17,13 +17,13 @@
         <div class="container">
              <div class="row">
             <div class="col">
-                <a href="../admin/cadastroProdutos/formCadastroProdutos.php"><img src="../icones/person.svg" alt="" width="50" height="50"></a>
+                <a href="../admin/cadastroProdutos/formCadastroProdutos.php"><img src="../icones/person.svg" alt="" width="150" height="150"></a>
             </div>
              <div class="col">
-                <a  href="../cadastroVendas/formCadastroVenda.php"><img src="../icones/cart-plus.svg " alt="" width="50" height="50"> </a>
+                <a  href="../cadastroVendas/formCadastroVenda.php"><img src="../icones/cart-plus.svg " alt="" width="150" height="150"> </a>
             </div>
             <div class="col">
-                <a href="../index.php"><img src="../icones/box-arrow-left.svg" alt="" width="50" height="50"></a>
+                <a href="../index.php"><img src="../icones/box-arrow-left.svg" alt="" width="150" height="150"></a>
             </div>
              </div>
         </div>  
