@@ -15,7 +15,7 @@
         require_once '../funcoes.php';
         require_once '../conexao.php';
         try {
-            $query = "select v.nome, v.telefone, v.datanasc, v.quantidade, p.idprod, p.nomeprod, v.hora, v.valorpago, (v.quantidade * p.preco) as Valor_Total, (v.valorpago - (v.quantidade * p.preco)) as troco
+            $query = "select v.nome, v.telefone, v.datanasc, v.quantidade, p.idprod, p.nomeprod, v.hora, v.valorpago, (v.quantidade * p.preco) as valortotal, (v.valorpago - (v.quantidade * p.preco)) as troco
             from vendas as v inner join produto as p on v.codigo = p.idprod;";
             $stmt = $conn->prepare($query);
             $stmt->execute();
@@ -42,7 +42,7 @@
                     $hora = $row1["hora"];
                     $nomeRem = $row1["nomeprod"];
                     $quantidade = $row1["quantidade"];
-                    $valorTot = $row1["Valor_Total"];
+                    $valorTot = $row1["valortotal"];
                     $valorPago = $row1["valorpago"];
                     $valorTroco = $row1["troco"];
 
