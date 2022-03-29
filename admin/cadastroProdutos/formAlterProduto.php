@@ -27,9 +27,9 @@ $linha = le($conn, $idProd);
 
                     <div class="lado1">
                         NOME DO PRODUTO: 
-                        <p><input type="text" name="nomeProd" id="nomeprod" value="<?php echo $linha["nomeprod"]; ?>" placeholder="NOME"></p>
+                        <p><input type="text" name="nomeprod" id="nomeprod" value="<?php echo $linha["nomeprod"]; ?>" placeholder="NOME"></p>
                         QUANTIDADE: 
-                        <p><input type="number" name="quantidadeProd" id="quantidadeprod" value="<?php echo $linha["quantidadeprod"]; ?>" placeholder="QUANTIDADE"></p>
+                        <p><input type="number" name="quantidadeprod" id="quantidadeprod" value="<?php echo $linha["quantidadeprod"]; ?>" placeholder="QUANTIDADE"></p>
                     </div>
                     <div class="lado2">
                         VALOR UNITARIO: 
