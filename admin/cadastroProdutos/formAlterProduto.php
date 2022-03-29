@@ -3,8 +3,8 @@
 require_once '../../conexao.php';
 require_once '../../funcoes.php';
 
-$idProd = $_GET['idProd'];
-$linha = le($conn, $idProd);
+$idprod = $_GET['idprod'];
+$linha = le($conn, $idprod);
 ?>
 <html>
     <head>
