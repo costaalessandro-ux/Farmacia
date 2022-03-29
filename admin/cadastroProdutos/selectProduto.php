@@ -50,8 +50,8 @@
 		  echo "<td>$quantidadeProd</td>";
 		  echo "<td>$preco</td>";
                   echo "<td>$descricao</td>";	  
-		  echo '<td><a href="deleteProduto.php?idProd='. $row["idprod"] . '"><img src="../../icones/file-excel.svg" alt="" width="15" height="30"></a></td>';
-		  echo '<td><a href="formAlterProduto.php?idProd='. $row["idprod"] . '">Alterar</a></td>';
+		  echo '<td><a href="deleteProduto.php?idprod='. $row["idprod"] . '"><img src="../../icones/file-excel.svg" alt="" width="15" height="30"></a></td>';
+		  echo '<td><a href="formAlterProduto.php?idprod='. $row["idprod"] . '">Alterar</a></td>';
 		  echo "</tr>";
 	  }
   }       
