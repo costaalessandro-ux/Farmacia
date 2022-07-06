@@ -52,7 +52,10 @@
                   echo "<td>$descricao</td>";	  
 		  echo '<td><a href="deleteProduto.php?idprod='. $row["idprod"] . '"><img src="../../icones/file-excel.svg" alt="" width="15" height="30"></a></td>';
 		  echo '<td><a href="formAlterProduto.php?idprod='. $row["idprod"] . '">Alterar</a></td>';
+                  echo '<td><a href="javascript:confirmaAlteracao($row["idprod"])">Alterar</a></td>';
 		  echo "</tr>";
+                  
+                  
 	  }
   }       
           echo '</div>';
@@ -64,5 +67,6 @@
         <div class="icone">
             <a href="formCadastroProdutos.php"><img src="../../icones/box-arrow-left.svg" alt="" width="100" height="50"></a>
         </div>
+    <script src="confirmacao.js"></script>
     </body>
 </html>
