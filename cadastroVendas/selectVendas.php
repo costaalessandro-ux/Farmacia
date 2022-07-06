@@ -32,7 +32,6 @@
                           <th> Valor Total </th>
                           <th> Valor Pago </th>
                           <th> Troco </th>
-			  <th colspan=\"2\"> Ações </th>
 			</tr>";
 
                 while ($row1 = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -56,8 +55,6 @@
                     echo "<td> $valorTot </td>";
                     echo "<td> $valorPago </td>";
                     echo "<td> $valorTroco </td>";
-                    echo '<td><a href="deleteVendas.php?nome=' . $row1["nome"] . '">Excluir</a></td>';
-                    echo '<td><a href="formAlterVendas.php?nome=' . $row1["nome"] . '">Alterar</a></td>';
                     echo "</tr>";
                 }
             }
